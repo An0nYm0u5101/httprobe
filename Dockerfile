@@ -8,7 +8,7 @@ COPY . /go/src/app
 RUN go build -o httprobe main.go
 
 
-FROM alpine:3.9
+FROM alpine:latest
 
 RUN apk add shadow bash && \
     useradd --create-home --shell /sbin/nologin httprobe && \
